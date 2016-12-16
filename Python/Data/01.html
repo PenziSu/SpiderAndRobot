@@ -1,0 +1,133 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5">
+<link rel="stylesheet" type="text/css" href="css/content_01.css">
+<script type="text/javascript" src="js/autoRows.js"></script>
+<script type="text/javascript">
+/*---------------設為首頁-------------------*/ 
+function setHomepage(){   
+    if (document.all){   
+        document.body.style.behavior = 'url(#default#homepage)';   
+        document.body.setHomePage('http://web.ccgh');   
+    }else if (window.sidebar){   
+        if (window.netscape){   
+            try {   
+                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");   
+            }catch (e) {   
+                alert("該操作被瀏覽器拒絕!");   
+            }   
+        }   
+        var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);   
+        prefs.setCharPref('browser.startup.homepage', 'http://web.ccgh');   
+    }   
+}    
+
+function addtofavorite() {
+	if (navigator.appName!="Netscape"){
+		window.external.AddFavorite(".", "澄清醫院資訊系統");
+	}else{
+		window.location = ".";
+	}
+}
+/*---------以下方法for IE only------------*/
+function makeDefault(element){
+	element.style.behavior='url(#default#homepage)'; 
+	element.setHomePage('http://');
+}
+</script>
+<title>澄清醫院資訊系統</title>
+</head>
+<base target="_self">
+
+<body id="main_01" onLoad="colorRows();">
+
+<div align="center">
+<center>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <form method="POST"  target="_top" action="" name="login_ccgh">
+  	<tr>
+  	<td width="80%"><img width="820" height="119" src="/images/main.jpg"/></td>
+    <td width="20%" align="center">
+    	<table width="100%" height="119" border="0" cellpadding="0" cellspacing="0" align="center">
+	    <tr>
+    	  <td  id="title_01">HIS 帳號</td>
+	      <td  id="content_02"><input type="text" name="T1" size="10" id="input_01" maxlength="10"></td>
+    	</tr>
+	    <tr>
+    	  <td  id="title_01">HIS 密碼</td>
+	      <td  id="content_02"><input type="password" name="T2" size="10" id="input_01" maxlength="10"></td>
+    	</tr>
+	    <tr>
+    	  <td  colspan="2" id="content_01">
+	      <p align="center">
+		  <input type="submit" value="登入" name="B1" id="button_01">
+		  <input type="reset" value="重新設定" name="B2" id="button_01">
+		  <br><br><a href="http://web.ccgh/floor1.mht" class="nav01">搬遷敬義單位分機表</a>
+		  </td>
+    	</tr>
+        </table>
+     </td>   
+     </tr>
+     </form>
+	</table>
+  </center>
+</div>
+
+<!----------------- Focus 到帳號欄位------------------->
+<script type="text/javascript">
+	login_ccgh.T1.focus();
+</script>
+<!----------------- Focus 到帳號欄位------------------->
+
+
+<div align="center">
+
+
+<!--
+  <center>
+  <table border="0" cellpadding="0" cellspacing="0" width="990">
+   <tr>
+   <td colspan="6" id="title_01">全院公告事項</td>
+   </tr>
+    <tr>
+      <td id="title_02" align='center' width="99">公告編號</td>
+      <td id="title_02" align='center' width='30'>等級</td>
+      <td id="title_02" align='center'>發佈日期</td>
+      <td id="title_02" align='center'>發佈者</td>
+      <td id="title_02" align='center'>公告標題</td>
+    </tr>
+
+	<tr>
+   <td colspan="6">
+   <p align="center"><b><font color="#787878">無公告事項 
+   </font></b>
+   </td>
+   </tr>
+	
+
+  </table>-->
+  <!-- <table border="0" cellspacing="0" cellpadding="0" width="90%">
+  <tr>
+  <td id="content_que_transparent_right">
+  <a href="http://web3.ccgh/ccghit/ccgh.asp" class="nav_02" target="_blank">資安稽核單</a></td>
+  </tr>
+  </table> -->
+  
+  
+  <center>  
+  <table border="0" cellpadding="0" cellspacing="0" width="100%">
+   <tr>
+	   <td colspan="3">
+      <iframe name="I1" src="link_url.asp?new_id=201612120001&folder_name=201612&files_name=201612120001澄清又一週 no203.jpg" width="1020" height="450" scrolling="yes" align="left" border="0" frameborder="0">您的瀏覽器不支援內置框架或目前的設定為不顯示內置框架。</iframe>
+     
+       </td>
+   </tr>
+   <tr>
+   	 <td id='title_01'><a class='nav_01' href='http://web3.ccgh/upload/WebCcgh_Paper/201612/201612050001澄清又一週 no202.jpg'><font color='#ffffff'>	澄清又一週2016/12/5</a></a> </td> <td id='title_01'><a class='nav_01' href='http://web3.ccgh/upload/WebCcgh_Paper/201611/201611280001澄清又一週 no201.jpg'><font color='#ffffff'>	澄清又一週2016/11/28</a></a> </td> <td id='title_01'><a class='nav_01' href='http://web3.ccgh/upload/WebCcgh_Paper/跳蚤市場.pdf'><font color='#ffffff'>跳蚤市場</a></a> </td>
+    
+   </tr>   
+  </table>  
+  
+  </center>
+</div>
+
+</body>
