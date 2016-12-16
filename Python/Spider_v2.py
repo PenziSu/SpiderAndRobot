@@ -24,13 +24,13 @@ f=[] #¬ÛÃö»â°ì
 for row in table.findAll("tr"):
   cells = row.findAll('td')
   #states = row.findAll('th')
-  print len(cells)
+  #print len(cells)
   if len(cells) >= 1:
-    a.append(cells[0].find(text=True))
-    b.append(states[0].find(text=True))
-    c.append(cells[1].find(text=True))
-    d.append(cells[2].find(text=True))
-    e.append(cells[3].find(text=True))
-    f.append(cells[4].find(text=True))
+    #a.append(cells[0].find(text=True))
+    #b.append(states[0].find(text=True))
+    #c.append(cells[1].find(text=True))
+    #d.append(cells[2].find(text=True))
+    #e.append(cells[3].find(text=True))
+    #f.append(cells[4].find(text=True))
 
-print a
+#print a
