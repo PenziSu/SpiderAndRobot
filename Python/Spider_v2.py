@@ -25,7 +25,7 @@ for row in table.findAll("tr"):
   cells = row.findAll('td')
   #states = row.findAll('th')
   print len(cells)
-  if len(cells) == 3:
+  if len(cells) >= 1:
     a.append(cells[0].find(text=True))
     b.append(states[0].find(text=True))
     c.append(cells[1].find(text=True))
@@ -33,4 +33,4 @@ for row in table.findAll("tr"):
     e.append(cells[3].find(text=True))
     f.append(cells[4].find(text=True))
 
-print hello
+print a
