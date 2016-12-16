@@ -33,3 +33,4 @@ for row in table.findAll("tr"):
     e.append(cells[3].find(text=True))
     f.append(cells[4].find(text=True))
 
+print hello
